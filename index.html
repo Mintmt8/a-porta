@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login com Vídeo de Fundo</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Vídeo como background -->
+  <video autoplay muted loop playsinline id="bg-video">
+    <source src="background.mp4" type="video/mp4" />
+    Seu navegador não suporta vídeos em HTML5.
+  </video>
+
+  <!-- Camada de sobreposição -->
+  <div class="overlay">
+    <div class="login-box">
+      <h2>Digite a senha</h2>
+      <input type="password" id="password" placeholder="Senha" onclick="startAudioOnce()" />
+      <button onclick="checkPassword()">Entrar</button>
+      <p id="error-message"></p>
+    </div>
+  </div>
+
+  <audio id="bg-audio" src="audio.mp3"></audio>
+
+  <!-- Vídeo de sucesso -->
+  <video id="success-video" src="success-video.mp4" style="display:none;" muted autoplay></video>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
